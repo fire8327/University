@@ -1,11 +1,5 @@
 /*jshint esnext: true */
-$("#toggle").click( () => {
-  $("#menu").toggleClass("-translate-y-60");
-  $("body").toggleClass("overflow-hidden");
-  $("#overlay").toggleClass("z-40");
-  $("#overlay").toggleClass("opacity-0");
-});
-$("#overlay").click( () => {
+$("#toggle, #overlay, .scroll").click( () => {
   $("#menu").toggleClass("-translate-y-60");
   $("body").toggleClass("overflow-hidden");
   $("#overlay").toggleClass("z-40");
