@@ -1,6 +1,6 @@
 /*jshint esnext: true */
 $("#toggle, #overlay, .scroll").click( () => {
-  $("#menu").toggleClass("-translate-y-60");
+  $("#menu").toggleClass("-translate-y-72");
   $("body").toggleClass("overflow-hidden");
   $("#overlay").toggleClass("z-40");
   $("#overlay").toggleClass("opacity-0");
