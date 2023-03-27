@@ -1,6 +1,36 @@
 /*jshint esnext: true */
-const menu = document.getElementById("menu");
-
-menu.addEventListener("click", () => {
-  menu.classList.toggle("opacity-70");
+$("#toggle").click( () => {
+  $("#menu").toggleClass("-translate-y-60");
+  $("body").toggleClass("overflow-hidden");
+  $("#overlay").toggleClass("z-40");
+  $("#overlay").toggleClass("opacity-0");
 });
+$("#overlay").click( () => {
+  $("#menu").toggleClass("-translate-y-60");
+  $("body").toggleClass("overflow-hidden");
+  $("#overlay").toggleClass("z-40");
+  $("#overlay").toggleClass("opacity-0");
+});
+
+/* scroll */
+$("a").on("click", function(e){
+  e.preventDefault();
+  var anchor = $(this).attr('href');
+  $('html, body').stop().animate({
+      scrollTop: $(anchor).offset().top - 60
+  }, 1000);
+});
+
+/* back to top */
+var toTopButton = document.getElementById("to-top-button");
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        toTopButton.classList.remove("hidden");
+    } else {
+        toTopButton.classList.add("hidden");
+    }
+}
+
+function goToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

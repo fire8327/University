@@ -16,11 +16,11 @@
                 <p class="text-2xl uppercase font-semibold">ВУЗЫ.ИНФО</p>
             </a>
             <div class="hidden lg:flex items-center gap-6 text-xl">
-                <a href="" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">О сервисе</a>
-                <a href="" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Преимущества</a>
-                <a href="" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Топ ВУЗов</a>
+                <a href="#service" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">О сервисе</a>
+                <a href="#advantages" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Преимущества</a>
+                <a href="#top" class="border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Топ ВУЗов</a>
             </div>            
-            <button type="button" id="menu" class="lg:hidden">
+            <button type="button" id="toggle" class="lg:hidden transition-all duration-500">
                 <svg class="w-8 transition-all duration-500 fill-[#2C3E50]" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="64" height="8" rx="4"/>
                     <rect y="16" width="64" height="8" rx="4"/>
@@ -29,20 +29,26 @@
             </button>
        </nav>
     </header>  
+    <div class="w-full bg-white absolute top-auto p-4 flex flex-col text-[#2c3e50] z-50 text-xl gap-4 transition-all duration-500 -translate-y-60 lg:hidden" id="menu">
+        <a href="#service">О сервисе</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#top">Топ ВУЗов</a>
+    </div>
+    <div class="w-full h-screen absolute top-auto bg-black bg-opacity-60 -z-40 opacity-0 lg:hidden" id="overlay"></div>
 
     <div class="w-full bg-[url('Assets/Images/about/bg.jpg')] h-[calc(100vh-80px)] bg-cover relative bg-right">
         <div class="container mx-auto px-4 text-white h-[calc(100vh-80px)] flex flex-col justify-between py-12">
-            <div class="flex flex-col gap-8 pt-20 md:pt-36">
+            <div class="flex flex-col gap-8 pt-20 md:pt-36" id="service">
                 <p class="text-3xl w-fit md:ml-auto">О сервисе</p>
                 <p class="text-lg w-full md:w-2/3 lg:w-1/2 ml-auto text-justify">Добро пожаловать на наш сайт о вузах Хабаровского края! Здесь вы найдете полезную информацию о высших учебных заведениях края, специальностях, условиях поступления и многое другое. Мы постарались собрать все самое важное и интересное для тех, кто хочет получить качественное образование в Хабаровском крае. Надеемся, что наш сайт поможет вам сделать правильный выбор и достичь успехов в будущем!</p>
             </div>
-            <a href="" class="px-4 py-3 rounded-xl border-2 border-white w-fit mx-auto animate-bounce hover:delay-100 transition-all duration-500 hover:text-[#2c3e50] hover:bg-white font-semibold">Перейти к ВУЗам</a>
+            <a href="#top" class="px-4 py-3 rounded-xl border-2 border-white w-fit mx-auto animate-bounce hover:delay-100 transition-all duration-500 hover:text-[#2c3e50] hover:bg-white font-semibold">Перейти к ВУЗам</a>
         </div>
     </div>
 
     
     <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
-        <p class="text-3xl">Преимущества выбора нашего сервиса</p>
+        <p class="text-3xl" id="advantages">Преимущества выбора нашего сервиса</p>
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div class="flex flex-col shadow-xl bg-white p-4 rounded-xl gap-4 items-center text-center">
                 <img src="Assets/Images/advantages/1.svg" alt="" class="w-48 h-48">
@@ -63,7 +69,7 @@
     </div>
     
     <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
-        <p class="text-3xl">Топ-11 ВУЗов Хабаровского Края 2023</p>
+        <p class="text-3xl" id="top">Топ-11 ВУЗов Хабаровского Края 2023</p>
         <div class="flex flex-col gap-1">
             <p>Ниже на странице собран рейтинг 11 лучших ВУЗов.</p>
             <p>Список составлен рейтинговым агентством на основании следующих показателей:</p>
@@ -246,6 +252,12 @@
     <footer class="py-6 px-4 bg-[#0f3043] flex justify-center items-center text-center text-white">
         <p>© 2023 UniversityInfo™. All Rights Reserved.</p>
     </footer>
+
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-90 bottom-5 md:bottom-8 right-5 md:right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-[#2c3e50] text-white text-3xl font-bold flex items-center justify-center">
+        <svg class="w-4" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.35355 0.646447C4.15829 0.451184 3.84171 0.451184 3.64645 0.646447L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646447ZM4.5 11V1H3.5L3.5 11H4.5Z" fill="white"/>
+        </svg>               
+    </button>
     
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
