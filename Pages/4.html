@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/CSS/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Главная</title>
+</head>
+<body class="bg-[#eee] text-[#2c3e50]">
+    <header class="py-4 px-4 bg-white">
+       <nav class="container mx-auto flex justify-between items-center">
+            <a class="flex items-center gap-4" href="../index.html">
+                <img class="w-12" src="https://img.icons8.com/external-kmg-design-flat-kmg-design/64/null/external-university-college-kmg-design-flat-kmg-design.png"/>
+                <p class="text-2xl uppercase font-semibold">ВУЗЫ.ИНФО</p>
+            </a>
+            <div class="hidden lg:flex items-center gap-6 text-xl">
+                <a href="#vuz" class="scroll border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">О ВУЗе</a>
+                <a href="#indicators" class="scroll border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Ключевые показатели</a>
+                <a href="#programs" class="scroll border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Программы обучения</a>
+                <a href="#contacts" class="scroll border-b-2 border-white hover:border-[#2c3e50] pb-1 hover:delay-100 transition-all duration-500">Контактная информация</a>
+            </div>            
+            <button type="button" id="toggle" class="lg:hidden transition-all duration-500">
+                <svg class="w-8 transition-all duration-500 fill-[#2C3E50]" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="64" height="8" rx="4"/>
+                    <rect y="16" width="64" height="8" rx="4"/>
+                    <rect y="32" width="64" height="8" rx="4"/>
+                </svg>                
+            </button>
+       </nav>
+    </header>  
+    <div class="w-full bg-white absolute top-auto p-4 flex flex-col text-[#2c3e50] z-50 text-xl gap-4 transition-all duration-500 -translate-y-72 lg:hidden" id="menu">
+        <a class="scroll" href="#vuz">О ВУЗе</a>
+        <a class="scroll" href="#indicators">Ключевые показатели</a>
+        <a class="scroll" href="#programs">Программы обучения</a>
+        <a class="scroll" href="#contacts">Контактная информация</a>
+    </div>
+    <div class="w-full h-screen absolute top-auto bg-black bg-opacity-60 -z-40 opacity-0 lg:hidden" id="overlay"></div>
+
+    <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
+        <a href="../index.html" class="bg-white rounded-xl hover:delay-100 transition-all duration-500 hover:scale-105 shadow-xl w-fit px-3 py-2 flex items-center gap-2">
+            <img src="../Assets/Images/back/back.svg" alt="" class="w-8">
+            <span>Назад</span>
+        </a>
+        <p class="text-3xl" id="vuz">Об учебном заведении</p>
+        <div class="flex flex-col md:flex-row gap-4 lg:gap-6 lg:items-center justify-between">                    
+            <img src="../Assets/Images/top/4.jpg" alt="" class="w-64">
+        </div>
+        <p>Федеральное государственное бюджетное образовательное учреждение высшего образования «Тихоокеанский государственный университет».</p>
+    </div>
+
+    <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
+        <p class="text-3xl" id="indicators">Ключевые показатели ВУЗа</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center md:flex-row gap-4">
+                <div class="relative">
+                    <svg viewbox="0 0 200 200" class="w-32">
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ccc"/>
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" class="stroke-blue-600"
+                            stroke-linecap="round" stroke-dasharray="430 502.4"
+                            stroke-dashoffset="-45" />
+                    </svg>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">56.4</div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p>Средний проходной балл</p>
+                    <p class="text-lg text-gray-400">Среднее в РФ 65.5</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:flex-row gap-4">
+                <div class="relative">
+                    <svg viewbox="0 0 200 200" class="w-32">
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ccc"/>
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" class="stroke-blue-600"
+                            stroke-linecap="round" stroke-dasharray="502.4 502.4"
+                            />
+                    </svg>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">2171</div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p>Бюджетные места</p>
+                    <p class="text-lg text-gray-400">Среднее в РФ 1 136</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:flex-row gap-4">
+                <div class="relative">
+                    <svg viewbox="0 0 200 200" class="w-32">
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ccc"/>
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" class="stroke-blue-600"
+                            stroke-linecap="round" stroke-dasharray="375 502.4"
+                            stroke-dashoffset="-45" />
+                    </svg>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">118</div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p>Сред. стоимость за год, тыс. руб.</p>
+                    <p class="text-lg text-gray-400">Среднее в РФ 158 483</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:flex-row gap-4">
+                <div class="relative">
+                    <svg viewbox="0 0 200 200" class="w-32">
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ccc"/>
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" class="stroke-blue-600"
+                            stroke-linecap="round" stroke-dasharray="502.4 502.4"
+                            />
+                    </svg>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">21 000</div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p>Общее число студентов</p>
+                    <p class="text-lg text-gray-400">Среднее в РФ 6 745</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:flex-row gap-4">
+                <div class="relative">
+                    <svg viewbox="0 0 200 200" class="w-32">
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ccc"/>
+                        <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" class="stroke-blue-600"
+                            stroke-linecap="round" stroke-dasharray="19 502.4"
+                            stroke-dashoffset="-45" />
+                    </svg>
+                    <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">3.8</div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p>Преподавателей на 100 студентов</p>
+                    <p class="text-lg text-gray-400">Среднее в РФ 11.84</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
+        <p class="text-3xl" id="programs">Программы обучения</p>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Начальное образование. Дополнительное образование</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Преподавание филологических дисциплин (преподавание русского языка и литературы)</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Теория и практика межкультурной коммуникации </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Художественно- эстетическое образование. Анимация</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Юриспруденция </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">71.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Азиатские исследования</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">70.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">10</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Биология. География</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Биология. Химия </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">53.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">20</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Государственно-правовая направленность</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">73.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Дошкольное образование. Логопедия</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">50.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Изобразительное искусство. Технология</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">64.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">История. Обществознание</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">64.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">45</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Лингвистика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">80.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">60</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Лингвистическое обеспечение межгосударственных отношений</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">79.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">11</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Логопедия</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">58.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">30</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Математика - информатика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Педагогическое образование (с двумя профилями подготовки)</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">49.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Преподавание филологических дисциплин</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">66.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Психология</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">64.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Психолого-педагогическое образование</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">57.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">48 400₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">45</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Русский язык и литература. Мировая художественная культура</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">64.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Сопровождение образования лиц с ОВЗ</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">48 500₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Социальная работа в системе социальных служб</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">53.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">52 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">50</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Физическая культура. Безопасность жизнедеятельности</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">66.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Автомобили и автомобильное хозяйство</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">39.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">30</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Автомобильный сервис </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">10</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Землеустройство</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 100₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Информационно- управляющие системы</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">39.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Кадастр недвижимости</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">44.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">225 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">23</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Лесоинженерия</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">42.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Логистика и технологии перевозок на автомобильном транспорте</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">45.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">45</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Психология</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">64.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Обогащение полезных ископаемых</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">47 800₽</span> за год</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Оборудование нефтегазопереработки</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">41.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">33</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Открытые горные работы</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">42.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">47 800₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Подъемно-транспортные, строительные, дорожные средства и оборудование</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">41.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Строительство</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">42.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">69 100₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">85</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Строительство уникальных зданий и сооружений</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">41.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">26</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Технология художественной обработки материалов</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">51.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Оборудование нефтегазопереработки</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">41.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">33</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Транпортная логистика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Цифровой менеджмент качества и информационная аналитика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">44.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Эксплуатация и обслуживание объектов транспорта и хранения нефти, газа и продуктов переработки</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">44.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">225 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">22</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Информационные технологии в инженерном дизайне</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Прикладная информатика в аддитивном производстве</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">22</span> бюджетных места</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Безопасность информационных систем</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">54.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Комплексный анализ данных и математическое моделирование</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">46.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Компьютерные сети и телекоммуникации</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">46.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Математические методы защиты информации</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">47.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Мультисервисные телекоммуникационные системы</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">45.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Прикладная информатика в экономике</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">50.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">52 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">37</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Разработка программно-информационных систем</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">58.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Региональное управление </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Технология и организация туроператорских и турагентских услуг</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Экономико-правовое обеспечение экономической безопасности</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">СПЕЦИАЛИТЕТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">70.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">14</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Менеджмент</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">66.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">31</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Реклама и связи с общественностью в системе государственного и муниципального управления</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">63.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">64 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Сервис в энергетике и нефтегазовом комплексе</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">52 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Социально-культурный сервис и туризм</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">57.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">17</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Экономика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">20</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Журналистика</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">76.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">168 200₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">32</span> бюджетных места</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Архитектурное проектирование </p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">66.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">33</span> бюджетных места</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Графический дизайн</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">88.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">80 800₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">7</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Дизайн архитектурной среды</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">56.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">22</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Реклама и связи с общественностью в системе государственного и муниципального управления</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">63.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">64 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Защита в чрезвычайных ситуациях</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">44.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Информационные системы в физике</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">48.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">20</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Технология переработки нефти и газа</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">46.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Экологическая безопасность</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">46.0</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">190 900₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">25</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Защита в чрезвычайных ситуациях</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">44.7</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">46 000₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">40</span> бюджетных мест</p>
+            </div>
+        </div>
+        <div class="p-4 rounded-xl shadow-xl bg-white flex flex-col lg:flex-row lg:justify-between gap-6">
+            <div class="flex flex-col gap-1">
+                <p class="text-blue-600">Декоративно-прикладное искусство и народные промыслы</p>
+                <p class="text-base text-violet-600 bg-violet-100 w-fit rounded-xl px-3">БАКАЛАВРИАТ</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">70.3</span> проходной балл</p>
+                <p class="text-gray-400">от <span class="text-2xl text-[#2c3e50]">328 500₽</span> за год</p>
+                <p class="text-gray-400"><span class="text-2xl text-[#2c3e50]">15</span> бюджетных мест</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-xl py-12 flex flex-col gap-8">
+        <p class="text-3xl" id="contacts">Контактная информация</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="flex flex-col p-4 bg-white shadow-xl rounded-xl gap-4">
+                <p class="text-2xl">Общая информация</p>
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Адрес:</p>
+                    <p class="text-lg">Хабаровский край, г. Хабаровск, ул. Тихоокеанская, д.136</p>
+                </div>    
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Официальный сайт:</p>
+                    <a href="http://pnu.edu.ru/" target="_blank" class="text-lg opacity-70">Сайт ВУЗа</a>
+                </div>  
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Email:</p>
+                    <a href="mailto:mail@pnu.edu.ru" class="text-lg">mail@pnu.edu.ru</a>
+                </div>   
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Телефон:</p>
+                    <a href="tel:+7 (4212) 76-85-00" class="text-lg">+7 (4212) 76-85-00</a>
+                </div>                
+            </div>
+            <div class="flex flex-col p-4 bg-white shadow-xl rounded-xl gap-4">
+                <p class="text-2xl">Приёмная комиссия</p>
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Адрес:</p>
+                    <p class="text-lg">Хабаровский край, г. Хабаровск, ул. Тихоокеанская, 136, ауд. 233ц</p>
+                </div>    
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Официальный сайт:</p>
+                    <a href="https://pnu.edu.ru/ru/applicant/training/about/" target="_blank" class="text-lg opacity-70">Сайт комиссии</a>
+                </div>  
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Email:</p>
+                    <a href="mailto:abitur@pnu.edu.ru" class="text-lg">abitur@pnu.edu.ru</a>
+                </div>   
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Телефон:</p>
+                    <a href="tel:+7 (4212) 22-43-71" class="text-lg">+7 (4212) 22-43-71</a>
+                </div>                
+                <div class="flex flex-col gap-1 pl-4">
+                    <p class="font-semibold">Режим работы:</p>
+                    <p class="text-lg">Пн., Вт., Ср., Чт., Пт. c 08:30 до 17:30</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-6 px-4 bg-[#0f3043] flex justify-center items-center text-center text-white">
+        <p>© 2023 UniversityInfo™. All Rights Reserved.</p>
+    </footer>
+
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-90 bottom-5 md:bottom-8 right-5 md:right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-[#2c3e50] text-white text-3xl font-bold flex items-center justify-center">
+        <svg class="w-4" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.35355 0.646447C4.15829 0.451184 3.84171 0.451184 3.64645 0.646447L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646447ZM4.5 11V1H3.5L3.5 11H4.5Z" fill="white"/>
+        </svg>               
+    </button>
+    
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+	<script src="../Assets/JS/custom.js"></script>
+</body>
+</html>
